@@ -246,4 +246,47 @@ branch 'dev' set up to track 'origin/dev'.
 
 ### Exercise 1
 ```bash
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git branch ft/bundle-2
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git checkout ft/bundle-2
+Switched to branch 'ft/bundle-2'
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        services.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/bundle-2)
+$ git add services.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/bundle-2)
+$ git commit -m "Third Commit"
+[ft/bundle-2 6503696] Third Commit
+ 1 file changed, 11 insertions(+)
+ create mode 100644 services.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/bundle-2)
+$ git push origin ft/bundle-2
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 685 bytes | 685.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Seacrs/Project/pull/new/ft/bundle-2
+remote:
+To https://github.com/Seacrs/Project.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+```
+### Exercise 2
+```bash
 ```
