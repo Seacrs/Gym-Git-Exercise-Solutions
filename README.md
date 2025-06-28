@@ -130,3 +130,120 @@ Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
 ```
+### Exercise 2
+```bash
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git stash list
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git add home.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 8265cea empty
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git add about.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 8265cea empty
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git add team.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 8265cea empty
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git stash list
+stash@{0}: WIP on dev: 8265cea empty
+stash@{1}: WIP on dev: 8265cea empty
+stash@{2}: WIP on dev: 8265cea empty
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git stash pop stash@{2}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   home.html
+
+Dropped stash@{2} (4598f5c25e723d187fa12cf3c1c0653ad731421a)
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git stash
+Saved working directory and index state WIP on dev: 8265cea empty
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git stash list
+stash@{0}: WIP on dev: 8265cea empty
+stash@{1}: WIP on dev: 8265cea empty
+stash@{2}: WIP on dev: 8265cea empty
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git stash pop stash@{2}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{2} (369a7eb874ea9376e8eddc9947a701ace4ab5d43)
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git stash pop stash@{0}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{0} (9b6e9dc5c752f895b5bd6c0354bb385cd0a32262)
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git commit -m "Second Commit"
+[dev 88521dd] Second Commit
+ 2 files changed, 22 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git stash list
+stash@{0}: WIP on dev: 8265cea empty
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git stash pop stash@{0}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped stash@{0} (1525ba4be08ab7b5cfded9182921294030b8f05c)
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git reset --hard
+HEAD is now at 88521dd Second Commit
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git push u origin dev
+error: src refspec origin does not match any
+error: failed to push some refs to 'u'
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (dev)
+$ git push -u origin dev
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 789 bytes | 789.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Seacrs/Project.git
+   de68793..88521dd  dev -> dev
+branch 'dev' set up to track 'origin/dev'.
+```
+## Bundle 2
+
+### Exercise 1
+```bash
+```
