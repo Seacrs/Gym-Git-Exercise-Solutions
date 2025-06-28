@@ -289,4 +289,184 @@ To https://github.com/Seacrs/Project.git
 ```
 ### Exercise 2
 ```bash
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/bundle-2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git pull origin master
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 892 bytes | 223.00 KiB/s, done.
+From https://github.com/Seacrs/Project
+ * branch            master     -> FETCH_HEAD
+   e19958a..ffff51d  master     -> origin/master
+Updating e19958a..ffff51d
+Fast-forward
+ about.html    | 11 +++++++++++
+ home.html     | 11 +++++++++++
+ services.html | 11 +++++++++++
+ 3 files changed, 33 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 services.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git branch ft/service-redesign
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign)
+$ git add .
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign)
+$ git commit -m "changes to services"
+[ft/service-redesign 3df5767] changes to services
+ 1 file changed, 6 insertions(+)
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 390 bytes | 390.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Seacrs/Project/pull/new/ft/service-redesign
+remote:
+To https://github.com/Seacrs/Project.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git add .
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git commit -m "changes to services"
+[master ae367e2] changes to services
+ 1 file changed, 6 insertions(+)
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 377 bytes | 377.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Seacrs/Project.git
+   ffff51d..ae367e2  master -> master
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign)
+$ git diff main..ft/service-redesign
+fatal: ambiguous argument 'main..ft/service-redesign': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign)
+$ git diff master..ft/service-redesign
+diff --git a/services.html b/services.html
+index c64314e..8067659 100644
+--- a/services.html
++++ b/services.html
+@@ -7,11 +7,11 @@
+   </head>
+   <body>
+     <h1>Services</h1>
+-    <p>We offer a range of activites</p>
+-    <ol>
+-      <p>Coding</p>
+-      <p>Testing</p>
+-      <p>Teaching</p>
+-    </ol>
++    <p>Our Services</p>
++    <ul>
++      <li>Debugging</li>
++      <li>Penetration testing</li>
++      <li>Security training</li>
++    </ul>
+   </body>
+ </html>
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign)
+$ git merge master
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign|MERGING)
+$ git checkout master
+services.html: needs merge
+error: you need to resolve your current index first
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign|MERGING)
+$ git merge master
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign|MERGING)
+$ git add .
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign|MERGING)
+$ git merge master
+fatal: You have not concluded your merge (MERGE_HEAD exists).
+Please, commit your changes before you merge.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign|MERGING)
+$ git commit -m "made changes to services"
+[ft/service-redesign 76eea5e] made changes to services
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign)
+$ git merge master
+Already up to date.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign)
+$ git merge master
+Already up to date.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 364 bytes | 364.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Seacrs/Project.git
+   3df5767..76eea5e  ft/service-redesign -> ft/service-redesign
 ```
+
+## Bundle 3
+
+### Exercise 1
