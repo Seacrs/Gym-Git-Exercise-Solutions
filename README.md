@@ -1012,8 +1012,35 @@ branch 'ft/squashing' set up to track 'origin/ft/squashing'.
 
 ## Bundle 5
 
-### Exercise 1
+### Exercise 2
 
 ```bash
+freez@FREEZ MINGW64 ~/onedrive/desktop (main)
+$ cd git-cafe-exercise
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/git-cafe-exercise (main)
+$ git init
+Reinitialized existing Git repository in C:/Users/freez/OneDrive/Desktop/git-cafe-exercise/.git/
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/git-cafe-exercise (main)
+$ git add index.html
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/git-cafe-exercise (main)
+$ git commit -m "changed index.html"
+[main d7ceaf7] changed index.html
+ 1 file changed, 399 insertions(+), 239 deletions(-)
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/git-cafe-exercise (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.55 KiB | 1.55 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Seacrs/git-cafe-exercise.git
+   d1d3f9c..d7ceaf7  main -> main
+branch 'main' set up to track 'origin/main'.
 
 ```
