@@ -922,3 +922,98 @@ To https://github.com/Seacrs/project_2.git
 branch 'master' set up to track 'project_2/master'.
 
 ```
+
+### Exercise 2
+
+```bash
+freez@FREEZ MINGW64 ~/onedrive/desktop/project (master)
+$ git branch ft/footer
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/project (master)
+$ git checkout ft/footer
+Switched to branch 'ft/footer'
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/project (ft/footer)
+$ git add home.html
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/project (ft/footer)
+$ git commit -m" Update: changed home"
+[ft/footer 4204d99]  Update: changed home
+ 1 file changed, 5 insertions(+)
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/project (ft/footer)
+$ git add home.html
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/project (ft/footer)
+$ git commit -m "Update: More changes to home"
+[ft/footer 9f875d0] Update: More changes to home
+ 1 file changed, 1 insertion(+)
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/project (ft/footer)
+$ git push -u origin ft/footer
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 643 bytes | 643.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/Seacrs/Project/pull/new/ft/footer
+remote:
+To https://github.com/Seacrs/Project.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/project (ft/footer)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'project_2/master'.
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/project (master)
+$ git branch ft/squashing
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/project (master)
+$ git checkout ft/squashing
+Switched to branch 'ft/squashing'
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/project (ft/squashing)
+$ git merge --squash ft/footer
+Updating 5eb115a..9f875d0
+Fast-forward
+Squash commit -- not updating HEAD
+ home.html | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/project (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing 150a705] footer changes squashing
+ 1 file changed, 6 insertions(+)
+
+freez@FREEZ MINGW64 ~/onedrive/desktop/project (ft/squashing)
+$ git push -u origin ft/squashing
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 399 bytes | 399.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/Seacrs/Project/pull/new/ft/squashing
+remote:
+To https://github.com/Seacrs/Project.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+
+```
+
+## Bundle 5
+
+### Exercise 1
+
+```bash
+
+```
