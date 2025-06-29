@@ -754,5 +754,171 @@ branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 ### Exercise 1
 
 ```bash
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/home-page-redesign)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git remote add git-copy https:://github.com/Seacrs/project_2.git
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git remote -v
+git-copy        https:://github.com/Seacrs/project_2.git (fetch)
+git-copy        https:://github.com/Seacrs/project_2.git (push)
+origin  https://github.com/Seacrs/Project.git (fetch)
+origin  https://github.com/Seacrs/Project.git (push)
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git add home.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git commit -m "Added more to Home page"
+[master 5eb115a] Added more to Home page
+ 1 file changed, 5 insertions(+)
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 355 bytes | 355.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Seacrs/Project.git
+   415b1ac..5eb115a  master -> master
+branch 'master' set up to track 'origin/master'.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push -u git-copy master
+warning: url has no scheme: //github.com/Seacrs/project_2.git/
+fatal: credential url cannot be parsed: //github.com/Seacrs/project_2.git/
+fatal: remote helper 'https' aborted session
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push -u git-copy main
+warning: url has no scheme: //github.com/Seacrs/project_2.git/
+fatal: credential url cannot be parsed: //github.com/Seacrs/project_2.git/
+fatal: remote helper 'https' aborted session
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push git-copy main
+warning: url has no scheme: //github.com/Seacrs/project_2.git/
+fatal: credential url cannot be parsed: //github.com/Seacrs/project_2.git/
+fatal: remote helper 'https' aborted session
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push -u project_2.git main
+error: src refspec main does not match any
+error: failed to push some refs to 'project_2.git'
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push -u project_2.git master
+fatal: 'project_2.git' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git remote -v
+git-copy        https:://github.com/Seacrs/project_2.git (fetch)
+git-copy        https:://github.com/Seacrs/project_2.git (push)
+origin  https://github.com/Seacrs/Project.git (fetch)
+origin  https://github.com/Seacrs/Project.git (push)
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push -u project_2.git main
+error: src refspec main does not match any
+error: failed to push some refs to 'project_2.git'
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ ^C
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push git-copy
+warning: url has no scheme: //github.com/Seacrs/project_2.git/
+fatal: credential url cannot be parsed: //github.com/Seacrs/project_2.git/
+fatal: remote helper 'https' aborted session
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git remote
+git-copy
+origin
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push origin master
+Everything up-to-date
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push git-copy master
+warning: url has no scheme: //github.com/Seacrs/project_2.git/
+fatal: credential url cannot be parsed: //github.com/Seacrs/project_2.git/
+fatal: remote helper 'https' aborted session
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push git-copy main
+warning: url has no scheme: //github.com/Seacrs/project_2.git/
+fatal: credential url cannot be parsed: //github.com/Seacrs/project_2.git/
+fatal: remote helper 'https' aborted session
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/contact-page
+  ft/faq-page
+  ft/home-page-redesign
+  ft/service-redesign
+  ft/team-page
+* master
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push -u project_2.git master
+fatal: 'project_2.git' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push -u project_2.git main
+error: src refspec main does not match any
+error: failed to push some refs to 'project_2.git'
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push -u project_2.git master
+fatal: 'project_2.git' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git remote
+origin
+project_2
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push -u project_2.git master
+fatal: 'project_2.git' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git push -u project_2 master
+Enumerating objects: 42, done.
+Counting objects: 100% (42/42), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (41/41), done.
+Writing objects: 100% (42/42), 6.48 KiB | 737.00 KiB/s, done.
+Total 42 (delta 21), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (21/21), done.
+To https://github.com/Seacrs/project_2.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'project_2/master'.
 
 ```
