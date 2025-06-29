@@ -470,3 +470,207 @@ To https://github.com/Seacrs/Project.git
 ## Bundle 3
 
 ### Exercise 1
+
+```bash
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git branch ft/team-page
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/team-page)
+$ git add team.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/team-page)
+$ git commit -m "new Team page"
+[ft/team-page f8f6d51] new Team page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/team-page)
+$ git push -u origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 440 bytes | 440.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/Seacrs/Project/pull/new/ft/team-page
+remote:
+To https://github.com/Seacrs/Project.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/team-page)
+$ git checkou master
+git: 'checkou' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/team-page)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git branch ft/contact page
+fatal: not a valid object name: 'page'
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git branch ft/contact-page
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git checkout ft-team-page
+error: pathspec 'ft-team-page' did not match any file(s) known to git
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (master)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/team-page)
+$ git log
+commit f8f6d512d35c0521b916ef66fb0f63ff8123b7af (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Seacrs <shemachris072@gmail.com>
+Date:   Sun Jun 29 11:43:04 2025 +0200
+
+    new Team page
+
+commit e518e1fb38f16dd3c298bb03c2a5242e09c29198 (origin/master, origin/HEAD, master, ft/contact-page)
+Author: Seacrs <138714004+Seacrs@users.noreply.github.com>
+Date:   Sat Jun 28 13:00:10 2025 +0200
+
+    Update services.html
+
+commit 52f08e781d0501f67a3ef130663769c79d7a386f
+Merge: ae367e2 76eea5e
+Author: Seacrs <138714004+Seacrs@users.noreply.github.com>
+Date:   Sat Jun 28 12:51:27 2025 +0200
+
+    Merge pull request #2 from Seacrs/ft/service-redesign
+
+    Added Services
+
+:
+commit f8f6d512d35c0521b916ef66fb0f63ff8123b7af (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Seacrs <shemachris072@gmail.com>
+Date:   Sun Jun 29 11:43:04 2025 +0200
+
+    new Team page
+
+commit e518e1fb38f16dd3c298bb03c2a5242e09c29198 (origin/master, origin/HEAD, master, ft/contact-page)
+Author: Seacrs <138714004+Seacrs@users.noreply.github.com>
+Date:   Sat Jun 28 13:00:10 2025 +0200
+
+    Update services.html
+
+commit 52f08e781d0501f67a3ef130663769c79d7a386f
+Merge: ae367e2 76eea5e
+Author: Seacrs <138714004+Seacrs@users.noreply.github.com>
+Date:   Sat Jun 28 12:51:27 2025 +0200
+
+    Merge pull request #2 from Seacrs/ft/service-redesign
+
+    Added Services
+
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/contact-page)
+$ git cherry-pick f9f6d512d35c0521b916ef66fb0f63ff8123b7af
+fatal: bad object f9f6d512d35c0521b916ef66fb0f63ff8123b7af
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/contact-page)
+$ git cherry-pick f8f6d512d35c0521b916ef66fb0f63ff8123b7af
+[ft/contact-page 6400b5b] new Team page
+ Date: Sun Jun 29 11:43:04 2025 +0200
+ 1 file changed, 11 insertions(+)
+ create mode 100644 team.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/contact-page)
+$ git add contact.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/contact-page)
+$ git commit -m "Added new contacts page"
+[ft/contact-page ef1f934] Added new contacts page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 contact.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/contact-page)
+$ git push -u origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 692 bytes | 692.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/Seacrs/Project/pull/new/ft/contact-page
+remote:
+To https://github.com/Seacrs/Project.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/contact-page)
+$ git branch ft/faq-page
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/contact-page)
+$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/faq-page)
+$ git add faq.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/faq-page)
+$ git commit -m "created new faq page"
+[ft/faq-page 5cce326] created new faq page
+ 1 file changed, 11 insertions(+)
+ create mode 100644 faq.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/faq-page)
+$ git push -u origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 435 bytes | 435.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Seacrs/Project/pull/new/ft/faq-page
+remote:
+To https://github.com/Seacrs/Project.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/faq-page)
+$ git revert f8f6d512d35c0521b916ef66fb0f63ff8123b7af
+[ft/faq-page a17656c] Revert "new Team page"
+ 1 file changed, 11 deletions(-)
+ delete mode 100644 team.html
+
+freez@FREEZ MINGW64 ~/OneDrive/desktop/project (ft/faq-page)
+$ git push -u origin ft/faq-page
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 269 bytes | 269.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Seacrs/Project.git
+   5cce326..a17656c  ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+```
+
+### Exercise 2
